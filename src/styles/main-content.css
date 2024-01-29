@@ -80,7 +80,7 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     width: 364px;
     height: 48px;
     margin-left: 8px;
-    background-color: var(--cor-background-terciaria);
+    background-color: #58034e;
     border-radius: 500px;
     border: 1px solid transparent;
 }
@@ -122,6 +122,29 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     font-weight: 700;
     border-radius: 40px;
 }
+
+ /* HOVER */
+  
+ .header__search:hover {
+  border: 1px solid #fff;
+}
+
+.header__login .subscribe:hover {
+  transform: scale(1.04);
+  color: #fff;
+  cursor: pointer;
+}
+
+.header__login .login:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.header__login .login:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+/* FIM HOVER */
 
 /* PLAYLIST */
 
@@ -251,11 +274,14 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
   
   .artist-card:hover {
     background-color: #252525;
+    
   }
   
   .card-img {
     width: 100%;
     margin-bottom: 16px;
+    position: relative;
+    top: 20px;
   }
   
   .artist-img {
@@ -271,6 +297,8 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     text-overflow: ellipsis;
     white-space: nowrap;
     min-height: 62px;
+    position: relative;
+    bottom: 20px;
   }
   
   .card-text a {
@@ -292,15 +320,18 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     font-weight: 400;
     font-size: 0.875rem;
   }
-  
+
   .play {
+    transition: all ease 0.4s;
     position: relative;
+    min-height: 55px; 
   }
   
-  .play .fa-play {
+  .fa-play {
     position: absolute;
     right: 10px;
-    top: 120px;
+    bottom: 50%; 
+    transform: translateY(50%);
     padding: 18px;
     background-color: #f3ce27;
     border-radius: 100%;
@@ -309,15 +340,19 @@ none: Um elemento com display: none é completamente removido do fluxo de layout
     transition: all ease 0.4s;
   }
   
-  .artist-card:hover .play .fa-play {
+  .artist-card:hover .play {
+    transform: translateY(-30px); 
+  }
+  
+  .artist-card:hover .fa-play {
     opacity: 1;
-    transform: translateY(-170px);
   }
   
   .play .fa-play:hover {
     padding: 20px;
     cursor: pointer;
   }
+  
   
   #result-artist {
     overflow-y: scroll;
